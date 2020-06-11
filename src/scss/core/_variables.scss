@@ -1,0 +1,33 @@
+//BREAK POINTS
+$tablet: 768px;
+$desktop: 1280px;
+
+// FONT
+
+$serif: "Roboto Slab", serif;
+$sans-serif: "Roboto", sans-serif;
+$font-size-default: 18;
+
+// FONT WEIGHTS
+
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+// COLOR
+
+$color-primary: #f26002;
+$color-secondary: #304268;
+$color-tertiary: #0271bc;
+$color-quaternary: #8ccbea;
+
+$color-light: #ffffff;
+$color-light-midtone: #eff9ff;
+$color-midtone: #4a4a4a;
+$color-dark: #000000;
+$color-dark-medium-opacity: rgba(0, 0, 0, 0.5);
+$color-dark-low-opacity: rgba(0, 0, 0, 0.2);
+
+// FONT AWSOME
+$arrow: "<i class=" fas fa-arrow-up "></i>";
+$chevron: "<i class=" fas fa-chevron-down "></i>";
