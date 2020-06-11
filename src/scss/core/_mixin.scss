@@ -14,15 +14,21 @@
 
 // FONTS
 
-@mixin font($color, $weight, $size) {
+@mixin font-style($color, $size) {
   color: $color;
-  font-weight: $weight;
   font-size: $size;
 }
 
-// BUTTONS
+//STYLES
 
-@mixin button {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+@mixin basic-h2 {
+  @include font-style($color-dark, rem(24));
+  text-transform: capitalize;
+  letter-spacing: rem(1);
+  line-height: rem(30);
+}
+
+@mixin basic-p {
+  line-height: rem(30);
+  letter-spacing: rem(0.5);
 }

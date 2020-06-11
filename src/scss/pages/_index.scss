@@ -1,8 +1,10 @@
+// HERO SECTION
+
 .main__hero {
   height: 100vh;
   background: url("../images/cover.jpg") no-repeat center;
   background-size: cover;
-  &__claim {
+  &__tittle {
     height: 50%;
     position: relative;
     top: 50%;
@@ -10,28 +12,113 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
     & h1 {
-      @include font($color-light, bold, rem(42));
+      @include font-style($color-light, rem(42));
       text-transform: uppercase;
       text-align: center;
-      text-shadow: 0 rem(2) rem(3) color-dark-low-opacity;
+      text-shadow: 0 rem(2) rem(3) $color-dark-low-opacity;
+      line-height: rem(60);
       & span {
         display: block;
+        letter-spacing: rem(3);
       }
     }
     & p {
-      @include font($color-light, regular, rem(16));
+      @include font-style($color-light, rem(16));
+      letter-spacing: rem(0.5);
     }
+
     &__button {
       width: rem(45);
       height: rem(45);
+      background-color: $color-light;
+      line-height: rem(45);
+      text-align: center;
+      border-radius: rem(50);
+      margin: rem(55);
+    }
+  }
+}
 
-      border: 1px solid red;
-      & a {
-        background-color: $color-light;
-        width: 100%;
-        display: block;
-      }
+// TIPS SECTION
+
+.main__tips {
+  & .wrapper {
+    padding: rem(30) rem(15);
+
+    & h4 {
+      @include font-style($color-quaternary, rem(14));
+      text-transform: capitalize;
+      font-weight: $regular;
+      letter-spacing: rem(0.5);
+      padding-bottom: rem(5);
+    }
+    & h2 {
+      @include basic-h2;
+      margin-bottom: rem(15);
+    }
+    & p {
+      @include basic-p;
+      color: $color-midtone;
+      margin-bottom: rem(30);
+    }
+  }
+  &__button {
+    width: rem(76);
+    height: rem(45);
+    border: 2px solid $color-primary;
+    border-radius: 25px;
+    margin-bottom: rem(15);
+    & a {
+      @include font-style($color-primary, rem(20));
+      width: 100%;
+      font-weight: $medium;
+      line-height: rem(45);
+      text-align: center;
+      padding: rem(22.5);
+    }
+  }
+}
+
+// REASON SECTION
+
+.main__reasons {
+  background-color: $color-light-midtone;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: rem(45);
+  text-align: center;
+
+  &__tittle {
+    @include basic-h2;
+    padding-top: rem(30);
+    grid-column: span 5;
+  }
+
+  &__object {
+    grid-column: 3/4;
+
+    & p {
+      @include basic-p;
+    }
+    & h3 {
+      line-height: rem(30);
+    }
+  }
+
+  &__button {
+    grid-column: 3/4;
+    width: rem(185);
+    height: rem(45);
+    background-color: $color-primary;
+    border-radius: 25px;
+    margin-bottom: rem(60);
+    text-align: center;
+    & a {
+      @include font-style($color-light, rem(20));
+      font-weight: $medium;
+      line-height: rem(45);
     }
   }
 }

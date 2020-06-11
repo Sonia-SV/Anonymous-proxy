@@ -1,0 +1,58 @@
+// BUTTON
+
+.footer__gotop__button {
+  width: rem(45);
+  height: rem(45);
+  background-color: $color-light;
+
+  line-height: rem(60);
+  text-align: center;
+  border-radius: rem(50);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 rem(2) rem(4) 0 $color-dark-medium-opacity;
+}
+
+//FOOTER
+
+.footer {
+  background-color: $color-secondary;
+  text-transform: uppercase;
+  @include font-style($color-light, rem(16));
+  line-height: rem(30);
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: rem(45);
+  }
+
+  &__menu,
+  &__social {
+    margin: rem(15);
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & a {
+        padding: rem(5);
+      }
+    }
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: rem(15);
+    padding-bottom: rem;
+    & span {
+      display: inline-block;
+      & .fa-heart {
+        color: $color-primary;
+      }
+    }
+  }
+}

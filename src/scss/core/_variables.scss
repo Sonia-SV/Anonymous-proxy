@@ -3,9 +3,10 @@ $tablet: 768px;
 $desktop: 1280px;
 
 //MARGINS
-$margin-mobile-small: rem(15);
-$margin-mobile-big: rem(70);
-$margin-tablet: rem(40);
+$margin-mobile-small: 15px;
+$margin-mobile-big: 70px;
+$margin-tablet: 40px;
+
 // FONT
 
 $serif: "Roboto Slab", serif;
@@ -14,7 +15,7 @@ $font-size-default: 18;
 
 // FONT WEIGHTS
 
-$normal: 400;
+$regular: 400;
 $medium: 500;
 $bold: 700;
 

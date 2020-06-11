@@ -1,8 +1,9 @@
 html {
   position: relative;
   font-family: $sans-serif;
+}
+p {
   font-size: rem(18);
-
   @include tablet {
     font-size: rem(20);
   }
@@ -16,11 +17,6 @@ h3 {
 
 .wrapper {
   width: 100%;
-  border: 1px solid green;
   max-width: 750px;
   margin: auto;
-}
-
-div {
-  border: 1px red solid;
 }
