@@ -1,0 +1,15 @@
+.header {
+  background: $color-tertiary;
+  width: rem(44);
+  height: rem(44);
+  z-index: 2;
+  position: fixed;
+  &__menu {
+    width: rem(44);
+    height: rem(44);
+    & a {
+      background-image: url("../images/ico-menu.svg");
+      display: block;
+    }
+  }
+}

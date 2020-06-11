@@ -13,3 +13,14 @@ h2,
 h3 {
   font-family: $serif;
 }
+
+.wrapper {
+  width: 100%;
+  border: 1px solid green;
+  max-width: 750px;
+  margin: auto;
+}
+
+div {
+  border: 1px red solid;
+}
