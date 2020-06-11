@@ -1,1 +1,1 @@
-Ejercicio fin de semana Adalab. Diseño Brook.
+CSS/HTML, final Project. Adalab. Sonia Sanz Vivas, Promo J.
