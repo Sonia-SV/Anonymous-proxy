@@ -69,11 +69,10 @@
         align-items: flex-start;
       }
     }
-  }
-
-  &__copy {
-    order: 0;
-    align-items: flex-start;
-    margin: 0;
+    &__copy {
+      order: 0;
+      align-items: flex-start;
+      margin: 0;
+    }
   }
 }
