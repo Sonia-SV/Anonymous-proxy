@@ -55,9 +55,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      padding-right: rem(40);
-      padding-left: rem(40);
-      padding-top: rem(0);
+      padding: 0 rem(40) rem(50) rem(40);
     }
 
     &__menu,

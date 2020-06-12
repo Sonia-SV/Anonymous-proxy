@@ -97,3 +97,41 @@
     }
   }
 }
+
+// ANIMATIONS
+
+@mixin animation-hero {
+  animation-duration: 10s;
+  animation-name: hero-move;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-delay: 1;
+}
+
+@keyframes hero-move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin animation-claim {
+  animation-duration: 5s;
+  animation-name: claim-move;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-delay: 1;
+}
+
+@keyframes claim-move {
+  from {
+    position: relative;
+    top: 0%;
+  }
+  to {
+    position: relative;
+    top: 50%;
+  }
+}
