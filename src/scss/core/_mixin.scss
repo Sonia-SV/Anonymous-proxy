@@ -14,21 +14,86 @@
 
 // FONTS
 
-@mixin font-style($color, $size) {
+@mixin font-style($color, $size, $weight) {
   color: $color;
   font-size: $size;
+  font-weight: $weight;
 }
 
-//STYLES
+//FONT STYLES
 
-@mixin basic-h2 {
-  @include font-style($color-dark, rem(24));
+@mixin style-h1 {
+  @include font-style($color-light, rem(42), $bold);
+  text-transform: uppercase;
+  text-shadow: 0 rem(2) rem(3) $color-dark-low-opacity;
+  letter-spacing: rem(3);
+  line-height: rem(60);
+
+  @include tablet {
+    font-size: rem(80);
+    line-height: rem(110);
+    letter-spacing: rem(6);
+  }
+  @include desktop {
+    font-size: rem(100);
+    line-height: rem(130);
+  }
+}
+
+@mixin style-claim {
+  @include font-style($color-light, rem(16), $regular);
+  letter-spacing: rem(0.5);
+
+  @include tablet {
+    font-size: rem(24);
+    letter-spacing: rem(1.8);
+  }
+}
+
+@mixin style-h4 {
+  @include font-style($color-quaternary, rem(14), $regular);
+  letter-spacing: rem(0.5);
+  line-height: rem(30);
+}
+
+@mixin style-h2 {
+  @include font-style($color-dark, rem(24), $bold);
   text-transform: capitalize;
   letter-spacing: rem(1);
   line-height: rem(30);
+
+  @include tablet {
+    font-size: rem(26);
+  }
+
+  @include desktop {
+    font-size: rem(32);
+  }
 }
 
-@mixin basic-p {
+@mixin style-h3 {
+  @include font-style($color-dark, rem(18), $bold);
+  line-height: rem(30);
+
+  @include tablet {
+    font-size: rem(24);
+  }
+}
+
+@mixin style-p {
   line-height: rem(30);
   letter-spacing: rem(0.5);
+}
+
+@mixin style-links {
+  @include font-style($color-light, rem(16), $regular);
+  line-height: rem(60);
+  text-transform: uppercase;
+  line-height: rem(30);
+  small {
+    font-size: rem(14);
+    & .fa-heart {
+      color: $color-primary;
+    }
+  }
 }
