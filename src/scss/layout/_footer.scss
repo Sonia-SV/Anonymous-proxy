@@ -4,13 +4,26 @@
   width: rem(45);
   height: rem(45);
   background-color: $color-light;
-  line-height: rem(60);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: rem(50);
   position: relative;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 rem(2) rem(4) 0 $color-dark-medium-opacity;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      display: none;
+    }
+  }
+  &:hover {
+    @include animation-button;
+  }
 }
 
 //FOOTER
@@ -34,7 +47,10 @@
       flex-direction: column;
       align-items: center;
       & a {
-        padding: rem(5);
+        padding: rem(10);
+        &:hover {
+          font-weight: bold;
+        }
       }
     }
   }
@@ -55,9 +71,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      padding-right: rem(40);
-      padding-left: rem(40);
-      padding-top: rem(0);
+      padding: 0 rem(40) rem(50) rem(40);
     }
 
     &__menu,
@@ -67,6 +81,7 @@
       padding-right: rem(30);
       & ul {
         align-items: flex-start;
+        margin-left: rem(5);
       }
     }
     &__copy {

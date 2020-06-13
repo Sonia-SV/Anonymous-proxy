@@ -4,6 +4,7 @@
   height: 100vh;
   background: url("../images/cover.jpg") no-repeat center;
   background-size: cover;
+  @include animation-hero;
   &__tittle {
     height: 50%;
     position: relative;
@@ -12,6 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @include animation-claim;
 
     & h1 {
       @include style-h1;
@@ -38,8 +40,7 @@
 
   @include tablet {
     &__tittle {
-      height: 40%;
-      top: 60%;
+      padding-top: rem(100);
       &__button {
         margin: rem(45);
       }
@@ -50,6 +51,7 @@
 // TIPS SECTION
 
 .main__tips {
+  background-color: $color-light;
   & .wrapper {
     padding: rem(30) rem(15);
 
@@ -79,6 +81,9 @@
       @include font-style($color-primary, rem(20), $medium);
       line-height: rem(45);
       padding: rem(15) rem(22);
+    }
+    &:hover {
+      @include transition-button;
     }
   }
   @include tablet {
@@ -140,6 +145,9 @@
       @include font-style($color-light, rem(20), $medium);
       line-height: rem(45);
       padding: rem(10) rem(25);
+    }
+    &:hover {
+      @include transition-button-2;
     }
   }
 }
