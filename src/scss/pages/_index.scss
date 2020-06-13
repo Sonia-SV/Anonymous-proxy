@@ -148,8 +148,11 @@
   .main__reasons {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: rem(45) rem(30);
+    max-width: rem(1280);
+    margin: auto;
     padding-right: rem(40);
     padding-left: rem(40);
+    text-align: center;
 
     &__tittle {
       grid-column: span 3;
@@ -162,5 +165,12 @@
       grid-column: 2/3;
       margin-top: rem(15);
     }
+  }
+}
+
+@include desktop {
+  .main__reasons {
+    padding-right: rem(85);
+    padding-left: rem(85);
   }
 }
