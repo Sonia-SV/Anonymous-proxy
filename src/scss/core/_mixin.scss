@@ -99,19 +99,12 @@
 //TRANSITIONS
 
 @mixin transition-button {
-  box-shadow: inset 0 0 0 2em $color-primary;
-  transition: box-shadow ease 1s;
+  box-shadow: inset rem(0) rem(0) rem(20) rem(17) $color-secondary;
+  border: none;
+  background-color: $color-light;
+  transition: box-shadow ease 0.5s;
   a {
-    color: $color-light;
-  }
-}
-
-@mixin transition-button-2 {
-  box-shadow: inset 0 0 0 2em $color-light;
-  transition: box-shadow ease 1s;
-  border: 2px solid $color-primary;
-  a {
-    color: $color-primary;
+    color: $color-light-midtone;
   }
 }
 
@@ -151,13 +144,13 @@
 }
 
 @mixin animation-button {
-  border: solid 2px $color-primary;
-  width: rem(185);
-  transition: width ease 0.3s, border ease 2s;
+  border: solid 1px $color-primary;
+  width: rem(120);
+  transition: width ease 0.3s, border ease 1s;
   p {
     display: block;
-    @include font-style($color-primary, rem(20), $bold);
-    padding-left: rem(20);
+    @include font-style($color-primary, rem(16), $bold);
+    padding-left: rem(10);
     opacity: 0%;
     animation-duration: 5s;
     animation-name: phrase-interaction;
