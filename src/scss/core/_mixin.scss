@@ -12,15 +12,13 @@
   }
 }
 
-// FONTS
+//FONT STYLES
 
 @mixin font-style($color, $size, $weight) {
   color: $color;
   font-size: $size;
   font-weight: $weight;
 }
-
-//FONT STYLES
 
 @mixin style-h1 {
   @include font-style($color-light, rem(42), $bold);
@@ -145,12 +143,10 @@
 
 @keyframes claim-move {
   from {
-    position: relative;
-    top: 0%;
+    transform: translate(0, -100%);
   }
   to {
-    position: relative;
-    top: 50%;
+    transform: translate(0, 0);
   }
 }
 
