@@ -47,7 +47,10 @@
       flex-direction: column;
       align-items: center;
       & a {
-        padding: rem(5);
+        padding: rem(10);
+        &:hover {
+          font-weight: bold;
+        }
       }
     }
   }
@@ -78,6 +81,7 @@
       padding-right: rem(30);
       & ul {
         align-items: flex-start;
+        margin-left: rem(5);
       }
     }
     &__copy {

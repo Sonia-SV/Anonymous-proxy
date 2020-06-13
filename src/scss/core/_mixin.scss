@@ -98,8 +98,26 @@
   }
 }
 
-// ANIMATIONS
+//TRANSITIONS
 
+@mixin transition-button {
+  box-shadow: inset 0 0 0 2em $color-primary;
+  transition: box-shadow ease 1s;
+  a {
+    color: $color-light;
+  }
+}
+
+@mixin transition-button-2 {
+  box-shadow: inset 0 0 0 2em $color-light;
+  transition: box-shadow ease 1s;
+  border: 2px solid $color-primary;
+  a {
+    color: $color-primary;
+  }
+}
+
+// ANIMATIONS
 @mixin animation-hero {
   animation-duration: 10s;
   animation-name: hero-move;
@@ -140,15 +158,12 @@
   border: solid 2px $color-primary;
   width: rem(185);
   transition: width ease 0.3s, border ease 2s;
-  &__link {
-    width: 100%;
-  }
   p {
     display: block;
     @include font-style($color-primary, rem(20), $bold);
     padding-left: rem(20);
     opacity: 0%;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-name: phrase-interaction;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.21, 0.98, 0.02, 1);
@@ -158,7 +173,11 @@
 
 @keyframes phrase-interaction {
   0% {
+    display: none;
     opacity: 0%;
+  }
+  25% {
+    display: block;
   }
   100% {
     opacity: 100%;

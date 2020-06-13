@@ -82,6 +82,9 @@
       line-height: rem(45);
       padding: rem(15) rem(22);
     }
+    &:hover {
+      @include transition-button;
+    }
   }
   @include tablet {
     & .wrapper {
@@ -142,6 +145,9 @@
       @include font-style($color-light, rem(20), $medium);
       line-height: rem(45);
       padding: rem(10) rem(25);
+    }
+    &:hover {
+      @include transition-button-2;
     }
   }
 }
