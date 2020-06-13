@@ -135,3 +135,32 @@
     top: 50%;
   }
 }
+
+@mixin animation-button {
+  border: solid 2px $color-primary;
+  width: rem(185);
+  transition: width ease 0.3s, border ease 2s;
+  &__link {
+    width: 100%;
+  }
+  p {
+    display: block;
+    @include font-style($color-primary, rem(20), $bold);
+    padding-left: rem(20);
+    opacity: 0%;
+    animation-duration: 8s;
+    animation-name: phrase-interaction;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.21, 0.98, 0.02, 1);
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes phrase-interaction {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}

@@ -4,13 +4,26 @@
   width: rem(45);
   height: rem(45);
   background-color: $color-light;
-  line-height: rem(60);
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: rem(50);
   position: relative;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 rem(2) rem(4) 0 $color-dark-medium-opacity;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      display: none;
+    }
+  }
+  &:hover {
+    @include animation-button;
+  }
 }
 
 //FOOTER
