@@ -110,7 +110,7 @@
 
 // ANIMATIONS
 @mixin animation-hero {
-  animation-duration: 10s;
+  animation-duration: 6s;
   animation-name: hero-move;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
@@ -127,7 +127,7 @@
 }
 
 @mixin animation-claim {
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-name: claim-move;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
