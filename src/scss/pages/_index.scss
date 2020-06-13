@@ -173,6 +173,7 @@
       @include font-style($color-light, rem(20), $medium);
       line-height: rem(45);
       padding: rem(10) rem(25);
+      text-transform: capitalize;
     }
     &:hover {
       @include transition-button;

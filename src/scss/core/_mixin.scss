@@ -149,6 +149,7 @@
   transition: width ease 0.3s, border ease 1s;
   p {
     display: block;
+    text-transform: uppercase;
     @include font-style($color-primary, rem(16), $bold);
     padding-left: rem(10);
     opacity: 0%;
