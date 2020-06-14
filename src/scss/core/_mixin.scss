@@ -99,13 +99,8 @@
 //TRANSITIONS
 
 @mixin transition-button {
-  box-shadow: inset rem(0) rem(0) rem(20) rem(17) $color-secondary;
-  border: none;
-  background-color: $color-light;
-  transition: box-shadow ease 0.5s;
-  a {
-    color: $color-light-midtone;
-  }
+  box-shadow: 0 0 rem(10) rem(2) $color-secondary;
+  transition: box-shadow ease 0.3s;
 }
 
 // ANIMATIONS
@@ -147,17 +142,17 @@
   border: solid 1px $color-primary;
   width: rem(120);
   transition: width ease 0.3s, border ease 1s;
-  p {
+  animation: button-jump 1s ease 0s infinite alternate;
+  span {
     display: block;
     text-transform: uppercase;
     @include font-style($color-primary, rem(16), $bold);
     padding-left: rem(10);
     opacity: 0%;
-    animation-duration: 5s;
-    animation-name: phrase-interaction;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.21, 0.98, 0.02, 1);
-    animation-delay: 0.3s;
+    animation: phrase-interaction 5s cubic-bezier(0.21, 0.98, 0.02, 1) 0.3s
+      infinite;
+    -webkit-animation: phrase-interaction 5s cubic-bezier(0.21, 0.98, 0.02, 1)
+      0.3s infinite;
   }
 }
 
@@ -171,5 +166,36 @@
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@-webkit-keyframes phrase-interaction {
+  0% {
+    display: none;
+    opacity: 0%;
+  }
+  25% {
+    display: block;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes button-jump {
+  from {
+    transform: translate(-50%, -30%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes button-jump {
+  from {
+    transform: translate(-50%, -30%);
+  }
+  to {
+    transform: translate(-50%, -50%);
   }
 }
