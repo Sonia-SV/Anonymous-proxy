@@ -105,11 +105,8 @@
 
 // ANIMATIONS
 @mixin animation-hero {
-  animation-duration: 6s;
-  animation-name: hero-move;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-delay: 1;
+  animation: hero-move 6s ease-out;
+  -webkit-animation: hero-move 6s ease-out;
 }
 
 @keyframes hero-move {
@@ -121,15 +118,29 @@
   }
 }
 
+@-webkit-keyframes hero-move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @mixin animation-claim {
-  animation-duration: 4s;
-  animation-name: claim-move;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-delay: 1;
+  animation: claim-move 4s ease-out;
+  -webkit-animation: claim-move 4s ease-out;
 }
 
 @keyframes claim-move {
+  from {
+    transform: translate(0, -100%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes claim-move {
   from {
     transform: translate(0, -100%);
   }
@@ -143,6 +154,7 @@
   width: rem(120);
   transition: width ease 0.3s, border ease 1s;
   animation: button-jump 1s ease 0s infinite alternate;
+  -webkit-animation: button-jump 1s ease 0s infinite alternate;
   span {
     display: block;
     text-transform: uppercase;
@@ -158,12 +170,9 @@
 
 @keyframes phrase-interaction {
   0% {
-    display: none;
     opacity: 0%;
   }
-  25% {
-    display: block;
-  }
+
   100% {
     opacity: 100%;
   }
@@ -171,12 +180,9 @@
 
 @-webkit-keyframes phrase-interaction {
   0% {
-    display: none;
     opacity: 0%;
   }
-  25% {
-    display: block;
-  }
+
   100% {
     opacity: 100%;
   }
