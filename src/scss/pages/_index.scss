@@ -66,6 +66,49 @@
   }
 }
 
+//OFFER SECTION
+
+.main__offer {
+  background-color: $color-primary;
+  display: none;
+  & .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: rem(30);
+
+    & h2 {
+      @include style-h2;
+      color: $color-light;
+      padding-bottom: rem(10);
+      width: 100%;
+      text-align: center;
+    }
+
+    & h4 {
+      @include style-h4;
+      color: $color-light;
+      width: 50%;
+
+      text-align: end;
+      padding-right: rem(15);
+    }
+
+    & p {
+      @include style-p;
+      color: $color-light;
+      width: 50%;
+      font-size: rem(1);
+      text-align: start;
+      padding-left: rem(15);
+    }
+  }
+  @include tablet {
+    display: block;
+  }
+}
+
 // TIPS SECTION
 
 .main__tips {
